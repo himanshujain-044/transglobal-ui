@@ -4,7 +4,7 @@ import Header from "./header";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="w-full flex flex-col">
       <Header />
       <Body />
       <Footer />

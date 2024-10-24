@@ -2,7 +2,7 @@ import Layout from "./layout";
 
 function App() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="w-full flex">
       <Layout />
     </div>
   );
