@@ -1,9 +1,10 @@
 import AboutUs from "../../components/feature-comps/about-us";
 import ImgSlider from "../../components/shared-comps/img-slider";
 
-const Body = () => {
+const Body = ({ selectedMenu }) => {
+  console.log("5", selectedMenu);
   return (
-    <div>
+    <div className="relative top-[88px]">
       <div>Body</div>
       <div>Transglobal</div>
       <AboutUs />

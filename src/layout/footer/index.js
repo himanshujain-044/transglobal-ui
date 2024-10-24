@@ -1,4 +1,4 @@
 const Footer = () => {
-  return <div>Footer</div>;
+  return <div className="w-full fixed bottom-0">Footer</div>;
 };
 export default Footer;
