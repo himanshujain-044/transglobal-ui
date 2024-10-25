@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Grid2 } from "@mui/material";
 import cx from "classnames";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/logos/logo.png";
 import Body from "../body";
 const menuItems = [
   { label: "Home", val: 1, isActivated: true },
@@ -26,7 +26,7 @@ const Header = () => {
   };
   return (
     <>
-      <Grid2 className="w-full fixed flex justify-between px-[2rem]">
+      <Grid2 className="w-full fixed z-50 flex justify-between px-[2rem] bg-[#edf6f6]">
         <Grid2 className="flex">
           <img
             src={logo}
@@ -37,7 +37,7 @@ const Header = () => {
               onMenuChange({ label: "Home", val: 1, isActivated: false });
             }}
           />
-          <div className="pl-[1.75rem] flex flex-col items-center text-start justify-center border-l-[2px] border-solid border-blue-950 text-blue-950 font-bold">
+          <div className="my-[1rem] pl-[1.75rem] flex flex-col items-center text-start justify-center border-l-[2px] border-solid border-blue-950 text-blue-950 font-bold">
             <span>Trans Global TL</span>
             <span>Petrochemical</span>
           </div>
