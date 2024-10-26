@@ -1,9 +1,10 @@
-import industry from "../../../assets/images/industry.jpg";
+import ImgSlider from "../../shared-comps/img-slider";
+
 const Home = () => {
   return (
     <div className="">
       <div className="relative">
-        <div className="absolute text-[#172554] w-[32rem] rounded-[4px] p-[1rem] bottom-[2rem] left-[1rem] bg-[#a9a9a9]">
+        <div className="z-[1] absolute text-[#172554] w-[32rem] rounded-[4px] p-[1rem] bottom-[2rem] left-[1rem] bg-[#a9a9a9] opacity-[0.75]">
           <h1 className="text-[42px]">Welcome to Transglobal</h1>
           <div className="tracking-[1px]">
             We are pioneering the future of energy sector by building and
@@ -11,7 +12,7 @@ const Home = () => {
             optimized production with energy efficiency.
           </div>
         </div>
-        <img src={industry} className="w-full h-[36rem] object-cover" />
+        <ImgSlider />
       </div>
       <div className="px-[3rem] py-[2rem] flex flex-col gap-[1rem]">
         <div className="flex flex-col tracking-[1px]">
