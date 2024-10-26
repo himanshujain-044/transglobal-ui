@@ -15,15 +15,12 @@ const contactInfo = [
 ];
 const Footer = () => {
   return (
-    <div
-      className="mt-[1rem] pt-[4rem] pb-[2rem] px-[3rem] flex flex-col"
-      id="about-us"
-    >
-      <div className="grid grid-cols-4 gap-[8rem] items-start">
+    <div className="py-4 px-3 md:px-8 flex flex-col" id="about-us">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-16 items-start justify-between">
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
-          <strong className="text-[24px] text-black">Trans Global TL</strong>
+          <strong className="text-xl py-2">Trans Global TL</strong>
           <p className="text-[#77808b]">
             The Storage and Terminal Solutions segment provides services for
             aboveground storage tanks and terminals, crude oil marketing and
@@ -35,7 +32,7 @@ const Footer = () => {
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
-          <strong>Service</strong>
+          <strong className="text-xl py-2">Service</strong>
           <span className="text-[#77808b]">Generator Rental</span>
           <span className="text-[#77808b]">Energy Storage</span>
           <span className="text-[#77808b]">HVAC</span>
@@ -45,7 +42,7 @@ const Footer = () => {
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
-          <strong>Company</strong>
+          <strong className="text-xl py-2">Company</strong>
           <span className="text-[#77808b]">Our Team</span>
           <span className="text-[#77808b]">Career</span>
           <span className="text-[#77808b]">Blog</span>
@@ -104,29 +101,34 @@ const Footer = () => {
         </div>
       </div>
       <hr className="w-full h-[1px] m-0 my-[2rem] bg-[linear-gradient(90deg_,_#6484ef_0%_,_#5ab6f0_100%)]" />
-      <div className="flex justify-between">
-        <strong className="no-underline text-black">
+      <div className="flex flex-col md:flex-row justify-between w-full gap-4">
+        <strong className="no-underline w-auto text-sm">
           © {new Date().getFullYear()}. All rights reserved by Trans Global TL
           inc.
         </strong>
-        <div className="flex gap-[1rem]">
+
+        <div className="flex md:flex-row flex-col item-center justify-between gap-3 md:gap-8">
           {contactInfo.map((item) => (
-            <div className="flex items-center gap-[0.5rem]">
+            <div className="flex items-center gap-2 justify-start">
               <img src={item.icon} alt="" width="18" />
-              <span className="">{item.text}</span>
+              <span className="text-wrap text-sm md:text-baase">
+                {item.text}
+              </span>
             </div>
           ))}
-          <a
-            href="//api.whatsapp.com/send?phone=917470839972&text=I have the requirement can we schedule have a call"
-            target="_blank"
-            rel="noreferrer"
-            className="no-underline"
-          >
-            <span className="flex gap-[4px] [&_svg]:fill-[#25d366]">
-              <WhatsApp />
-              Click to Whatsapp
-            </span>
-          </a>
+          <div className="flex items-center gap-1 md:justify-end text-base">
+            <a
+              href="//api.whatsapp.com/send?phone=917470839972&text=I have the requirement can we schedule have a call"
+              target="_blank"
+              rel="noreferrer"
+              className="no-underline"
+            >
+              <span className="flex gap-[4px] [&_svg]:fill-[#25d366]">
+                <WhatsApp />
+                Click to Whatsapp
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

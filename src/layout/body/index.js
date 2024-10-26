@@ -3,21 +3,20 @@ import ContactUs from "../../components/feature-comps/contact-us";
 import Home from "../../components/feature-comps/home";
 import ProjectReference from "../../components/feature-comps/project-reference";
 import Services from "../../components/feature-comps/services";
-// import ImgSlider from "../../components/shared-comps/img-slider";
+import { useMenu } from "../../context/MenuContext";
 
-const Body = ({ selectedMenu }) => {
+const Body = () => {
+  const { selectedMenu } = useMenu();
+
   return (
-    <div className="relative mt-[88px]">
+    <div className="relative mt-[68px] md:mt-[88px]">
       {selectedMenu === 1 && <Home />}
       {selectedMenu === 2 && <Services />}
       {selectedMenu === 3 && <ProjectReference />}
       {selectedMenu === 4 && <AboutUs />}
       {selectedMenu === 5 && <ContactUs />}
-      {/* <div>Body</div>
-      <div>Transglobal</div>
-      
-      <ImgSlider /> */}
     </div>
   );
 };
+
 export default Body;

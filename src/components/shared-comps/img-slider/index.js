@@ -38,7 +38,7 @@ function ImgSlider() {
           key={index}
           src={src}
           alt={`Slide ${index}`}
-          className="w-full h-[36rem] object-cover"
+          className="w-full min-h-8 md:h-[36rem] object-cover"
         />
       ))}
     </div>
