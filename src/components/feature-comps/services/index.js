@@ -4,15 +4,14 @@ const Services = () => {
   return (
     <div className="px-[2.5rem] mt-[2rem]">
       <div className="flex flex-col items-start">
-        <h1 className="text-[2.5rem] tracking-[4px]">Specialty Vessels</h1>
+        <h1 className="text-[2.5rem] tracking-[4px]">Hydrogen Production</h1>
         <div className="mb-[2rem] flex flex-col gap-[1rem] tracking-[2px] [&_span]:leading-[1.65rem]">
           <span>
-            For decades, Matrix Service has been the industry leader in the
-            engineering, fabrication, construction, maintenance, modification,
-            repair and relocation of aboveground storage tanks and specialty
-            vessels. Our AST capabilities cover atmospheric, pressurized and
-            cryogenic tanks for liquid, gas and bulk storage, including complete
-            terminals.
+            Utilizing cutting-edge methods, including electrolysis and biomass
+            gasification, we produce high-purity hydrogen that meets stringent
+            quality standards. Our AST capabilities cover atmospheric,
+            pressurized and cryogenic tanks for liquid, gas and bulk storage,
+            including complete terminals.
           </span>
           <span>
             Specialty tank and vessel construction projects are engineered and
@@ -36,14 +35,13 @@ const Services = () => {
         </Button>
       </div>
       <div className="flex flex-col justify-end items-end">
-        <h1 className="text-[2.5rem] tracking-[4px]">Material Handling</h1>
+        <h1 className="text-[2.5rem] tracking-[4px]">Distribution Networks</h1>
         <div className="mb-[2rem] flex flex-col gap-[1rem] tracking-[2px] [&_span]:leading-[1.65rem] text-end">
           <span>
-            Matrix Service has a dedicated team of mining professionals whose
-            focused competencies in mining facility engineering and material
-            handling are backed by decades of service in the mining and minerals
-            sector. We provide fabrication and construction services to ensure
-            that your raw materials are right where you need them.
+            Our extensive distribution infrastructure ensures that hydrogen is
+            delivered safely and efficiently to industries, fueling stations,
+            and beyond. We provide fabrication and construction services to
+            ensure that your raw materials are right where you need them.
           </span>
           <span>
             Teaming with our sister division Matrix PDM Engineering, Matrix
@@ -64,15 +62,15 @@ const Services = () => {
         </Button>
       </div>
       <div className="flex flex-col items-start">
-        <h1 className="text-[2.5rem] tracking-[4px]">Reliable Gas Supply</h1>
+        <h1 className="text-[2.5rem] tracking-[4px]">Consulting & Solutions</h1>
         <div className="mb-[2rem] flex flex-col gap-[1rem] tracking-[2px] [&_span]:leading-[1.65rem]">
           <span>
-            Hydrogen is widely used in refining processes to remove impurities
-            found in crude oil such as sulfur to meet stringent product and
-            environmental specifications. Removing these components allows
-            gasoline and diesel to burn cleaner and thus makes hydrogen a
-            critical component in the production of cleaner fuels needed by
-            efficient internal combustion engines.
+            We offer tailored consulting services to help businesses integrate
+            hydrogen into their operations, maximizing efficiency and
+            sustainability. Removing these components allows gasoline and diesel
+            to burn cleaner and thus makes hydrogen a critical component in the
+            production of cleaner fuels needed by efficient internal combustion
+            engines.
           </span>
           <span>
             Oxygen enrichment can help increase capacity or give refiners the

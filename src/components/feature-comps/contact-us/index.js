@@ -11,24 +11,16 @@ import { useState } from "react";
 import { phoneCountryCode } from "./phone-country-code";
 const serviceType = [
   {
-    text: "Mobile Application Development",
-    value: "mobileAppDev",
+    text: "Specialty Vessels",
+    value: "specialtyVessels",
   },
   {
-    text: "Web Development",
-    value: "webDev",
+    text: "Material Handling",
+    value: "materialHandling",
   },
   {
-    text: "UI/UX",
-    value: "uiux",
-  },
-  {
-    text: "QA Service",
-    value: "qa",
-  },
-  {
-    text: "Other",
-    value: "other",
+    text: "Reliable Gas Supply",
+    value: "reliableGasSupply",
   },
 ];
 
@@ -40,10 +32,6 @@ const requirementType = [
   {
     text: "New Project",
     value: "newProject",
-  },
-  {
-    text: "Hire Team",
-    value: "hireTeam",
   },
   {
     text: "Support Maintenance",
@@ -61,14 +49,14 @@ const ContactUs = () => {
     email: "",
     phone: "",
     countryCode: "+91",
-    serviceType: "webDev",
+    serviceType: "specialtyVessels",
     requirementType: "newProject",
     description: "",
   });
   return (
     <div>
       <h3 className="bg-[#172554] bg-clip-text font-semibold mb-[2rem] text-[24px] text-center">
-        Get Ready to Start Project
+        Get Ready to Start the Service
       </h3>
       <div className="flex justify-center gap-[3rem]">
         <div className="flex flex-col gap-[1rem] bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-[2rem] px-[4rem]">
@@ -216,7 +204,7 @@ const ContactUs = () => {
               label="Description"
               aria-describedby="description-helper-text"
               helperText={false && "Incorrect entry."}
-              placeholder="brief about the project..."
+              placeholder="Brief about the requirement ..."
               className="min-h-[6rem] w-[100%] resize-y rounded-[4px] border-[1px] border-solid border-[rgba(0,_0,_0,_.23)]"
               onChange={(e) => {
                 setAllFormValues((prev) => {
