@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <Grid2 className="w-full fixed z-50 top-0 flex justify-between items-center px-3 pl-1 md:px-8 md:pl-4 bg-[#edf6f6]">
+      <Grid2 className="w-full fixed z-50 top-0 flex justify-between items-center px-3 pl-1 md:px-8 md:pl-4 bg-[#edf6f6] shadow-sm">
         <Grid2 className="flex items-center">
           <img
             src={logo}

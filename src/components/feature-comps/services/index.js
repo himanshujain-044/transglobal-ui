@@ -2,10 +2,12 @@ import { Button } from "@mui/material";
 
 const Services = () => {
   return (
-    <div className="px-[2.5rem] mt-[2rem]">
+    <div className="px-3 py-6 md:px-8 md:py-6">
       <div className="flex flex-col items-start">
-        <h1 className="text-[2.5rem] tracking-[4px]">Hydrogen Production</h1>
-        <div className="mb-[2rem] flex flex-col gap-[1rem] tracking-[2px] [&_span]:leading-[1.65rem]">
+        <h1 className="text-[1.8rem] md:text-[2.5rem] md:tracking-[4px]">
+          Hydrogen Production
+        </h1>
+        <div className="mt-2 mb-4 flex flex-col gap-2 tracking-normal text-sm md:text-lg font-light text-wrap">
           <span>
             Utilizing cutting-edge methods, including electrolysis and biomass
             gasification, we produce high-purity hydrogen that meets stringent
@@ -20,12 +22,12 @@ const Services = () => {
           </span>
           <span>
             Matrix Service’s experience with specialty tanks and vessels
-            includes ASME spheres
+            includes ASME spheres.
           </span>
         </div>
         <img
           src="https://www.oil-refinery.com/wp-content/uploads/2018/08/inside-refinery-plant.jpg"
-          className="w-[45%] h-[22rem] object-cover"
+          className="w-full md:w-[45%] h-[22rem] object-cover"
         />
         <Button
           variant="contained"
@@ -34,9 +36,11 @@ const Services = () => {
           Get in touch
         </Button>
       </div>
-      <div className="flex flex-col justify-end items-end">
-        <h1 className="text-[2.5rem] tracking-[4px]">Distribution Networks</h1>
-        <div className="mb-[2rem] flex flex-col gap-[1rem] tracking-[2px] [&_span]:leading-[1.65rem] text-end">
+      <div className="flex flex-col items-end my-8 md:my-0">
+        <h1 className="text-[1.8rem] md:text-[2.5rem] md:tracking-[4px]">
+          Distribution Networks
+        </h1>
+        <div className="mt-2 mb-4 flex flex-col gap-2 tracking-normal text-sm md:text-lg font-light text-wrap">
           <span>
             Our extensive distribution infrastructure ensures that hydrogen is
             delivered safely and efficiently to industries, fueling stations,
@@ -52,7 +56,7 @@ const Services = () => {
         </div>
         <img
           src="https://oilbridges.com/wp-content/uploads/2020/02/404-bg-1170x517.jpg"
-          className="w-[45%] h-[22rem] object-cover"
+          className="w-full md:w-[45%] h-[22rem] object-cover"
         />
         <Button
           variant="contained"
@@ -62,8 +66,10 @@ const Services = () => {
         </Button>
       </div>
       <div className="flex flex-col items-start">
-        <h1 className="text-[2.5rem] tracking-[4px]">Consulting & Solutions</h1>
-        <div className="mb-[2rem] flex flex-col gap-[1rem] tracking-[2px] [&_span]:leading-[1.65rem]">
+        <h1 className="text-[1.8rem] md:text-[2.5rem] md:tracking-[4px]">
+          Consulting & Solutions
+        </h1>
+        <div className="mt-2 mb-4 flex flex-col gap-2 tracking-normal text-sm md:text-lg font-light text-wrap">
           <span>
             We offer tailored consulting services to help businesses integrate
             hydrogen into their operations, maximizing efficiency and
@@ -85,7 +91,7 @@ const Services = () => {
         </div>
         <img
           src="https://www.airproducts.com/-/media/images/969x646/content-row-image/509848898-refinery-twilight-3x2.jpg?as=0&w=969&hash=1FECECB22CCBFE6550F81C82337535C8"
-          className="w-[45%] h-[22rem] object-cover"
+          className="w-full md:w-[45%] h-[22rem] object-cover"
         />
         <Button
           variant="contained"

@@ -6,6 +6,7 @@ import {
   Select,
   TextareaAutosize,
   TextField,
+  useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
 import { phoneCountryCode } from "./phone-country-code";
@@ -53,13 +54,16 @@ const ContactUs = () => {
     requirementType: "newProject",
     description: "",
   });
+
+  const hasDesktopView = useMediaQuery((theme) => theme.breakpoints.up("md"));
+
   return (
-    <div>
-      <h3 className="bg-[#172554] bg-clip-text font-semibold mb-[2rem] text-[24px] text-center">
+    <div className="py-8">
+      <h3 className="bg-[#172554] bg-clip-text font-semibold text-2xl md:text-4xl mb-8 text-center">
         Get Ready to Start the Service
       </h3>
-      <div className="flex justify-center gap-[3rem]">
-        <div className="flex flex-col gap-[1rem] bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-[2rem] px-[4rem]">
+      <div className="flex flex-col md:flex-row justify-center gap-[3rem]">
+        <div className="flex flex-col gap-[1rem] bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-8 md:px-8">
           <FormControl className="w-full my-[0.7rem] flex items-baseline text-left [&_div]:w-full [&_.MuiFormHelperText-contained]:m-0">
             <TextField
               id="fullName"
@@ -205,7 +209,7 @@ const ContactUs = () => {
               aria-describedby="description-helper-text"
               helperText={false && "Incorrect entry."}
               placeholder="Brief about the requirement ..."
-              className="min-h-[6rem] w-[100%] resize-y rounded-[4px] border-[1px] border-solid border-[rgba(0,_0,_0,_.23)]"
+              className="min-h-[6rem] w-[100%] resize-y rounded-[4px] border-[1px] border-solid border-[rgba(0,_0,_0,_.23)] p-2"
               onChange={(e) => {
                 setAllFormValues((prev) => {
                   return { ...prev, description: e.target.value };
@@ -224,11 +228,10 @@ const ContactUs = () => {
         <div className="pf-container__map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4477.350809700731!2d-95.6869653626112!3d29.64507371617878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e0f33365856f%3A0x504c671058f6f7e2!2sPalliser%20Pl%2C%20Aliana%2C%20TX%2077407%2C%20USA!5e0!3m2!1sen!2sin!4v1729872769214!5m2!1sen!2sin"
-            width="500"
+            width={hasDesktopView ? "500" : "100%"}
             height="100%"
-            allowfullscreen=""
             style={{ border: "none" }}
-            loading="lazy"
+            loading="eager"
             referrerpolicy="no-referrer-when-downgrade"
             title="Richmon, TX 77407, USA"
           ></iframe>

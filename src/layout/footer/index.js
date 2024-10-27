@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, useMediaQuery } from "@mui/material";
 import cx from "classnames";
 import { WhatsApp } from "@mui/icons-material";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
@@ -7,6 +7,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import email from "../../assets/logos/email.png";
 import phone from "../../assets/logos/call.png";
 import address from "../../assets/logos/location.png";
+import StarryCanvas from "../../components/shared-comps/star-canvas";
 
 const contactInfo = [
   { text: "+ 1832-202-3840", icon: phone },
@@ -14,14 +15,20 @@ const contactInfo = [
   { text: "11622 Palliser Place, Richmond, TX 77407. U.S.A", icon: address },
 ];
 const Footer = () => {
+  const hasDesktopView = useMediaQuery((theme) => theme.breakpoints.up("md"));
   return (
-    <div className="py-4 px-3 md:px-8 flex flex-col" id="about-us">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-16 items-start justify-between">
+    <div
+      className="py-4 mt-8 px-3 md:px-8 flex flex-col bg-[#166490] text-[#fff] relative rounded-b-md"
+      id="about-us"
+    >
+      {hasDesktopView && <StarryCanvas />}
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-16 items-start justify-between z-10">
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
           <strong className="text-xl py-2">Trans Global TL</strong>
-          <p className="text-[#77808b]">
+          <p className="text-[#fff] font-extralight">
             The Storage and Terminal Solutions segment provides services for
             aboveground storage tanks and terminals, crude oil marketing and
             export/import terminals, LNG facilities for import/export fueling
@@ -33,35 +40,60 @@ const Footer = () => {
           className={cx("flex flex-col items-start justify-center text-start")}
         >
           <strong className="text-xl py-2">Service</strong>
-          <span className="text-[#77808b]">Generator Rental</span>
-          <span className="text-[#77808b]">Energy Storage</span>
-          <span className="text-[#77808b]">HVAC</span>
-          <span className="text-[#77808b]">Load Banks</span>
-          <span className="text-[#77808b]">Oil-Free Air Compressors</span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Generator Rental
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Energy Storage
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            HVAC
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Load Banks
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Oil-Free Air Compressors
+          </span>
         </div>
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
           <strong className="text-xl py-2">Company</strong>
-          <span className="text-[#77808b]">Our Team</span>
-          <span className="text-[#77808b]">Career</span>
-          <span className="text-[#77808b]">Blog</span>
-          <span className="text-[#77808b]">About Us</span>
-          <span className="text-[#77808b]">Contact Us</span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Our Team
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Career
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Blog
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            About Us
+          </span>
+          <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
+            Contact Us
+          </span>
         </div>
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
-          <strong>Join with us</strong>
+          <strong className="py-1">Join with us</strong>
           <div>
             <div className="flex gap-[1rem] [&_.MuiOutlinedInput-notchedOutline]:border-[1px] [&_.MuiOutlinedInput-notchedOutline]:border-solid [&_.MuiOutlinedInput-notchedOutline]:border-[#172554]">
               <TextField
-                id="eamil"
+                id="email"
                 size="small"
                 variant="outlined"
-                label="email"
-                aria-describedby="phoneNumber-helper-text"
+                label="Email"
                 helperText={false && "Incorrect entry."}
+                InputLabelProps={{
+                  style: { color: "white" }, // Label color
+                }}
+                inputProps={{
+                  style: { color: "white" }, // Text color
+                }}
               />
               <Button
                 variant="contained"
@@ -81,27 +113,29 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FacebookOutlinedIcon />
+              <FacebookOutlinedIcon
+                sx={{ bgcolor: "white", cursor: "pointer" }}
+              />
             </a>
             <a
               href="https://www.instagram.com/madhuvandigitalstech/"
               target="_blank"
               rel="noreferrer"
             >
-              <InstagramIcon />
+              <InstagramIcon sx={{ bgcolor: "white", cursor: "pointer" }} />
             </a>
             <a
               href="https://twitter.com/madhuvandigital"
               target="_blank"
               rel="noreferrer"
             >
-              <TwitterIcon />
+              <TwitterIcon sx={{ bgcolor: "white", cursor: "pointer" }} />
             </a>
           </div>
         </div>
       </div>
       <hr className="w-full h-[1px] m-0 my-[2rem] bg-[linear-gradient(90deg_,_#6484ef_0%_,_#5ab6f0_100%)]" />
-      <div className="flex flex-col md:flex-row justify-between w-full gap-4">
+      <div className="flex flex-col md:flex-row justify-between w-full gap-4 z-10">
         <strong className="no-underline w-auto text-sm">
           © {new Date().getFullYear()}. All rights reserved by Trans Global TL
           inc.
@@ -111,7 +145,7 @@ const Footer = () => {
           {contactInfo.map((item) => (
             <div className="flex items-center gap-2 justify-start">
               <img src={item.icon} alt="" width="18" />
-              <span className="text-wrap text-sm md:text-baase">
+              <span className="text-wrap text-sm hover:text-gray-100">
                 {item.text}
               </span>
             </div>
@@ -121,7 +155,7 @@ const Footer = () => {
               href="//api.whatsapp.com/send?phone=917470839972&text=I have the requirement can we schedule have a call"
               target="_blank"
               rel="noreferrer"
-              className="no-underline"
+              className="no-underline hover:text-gray-600"
             >
               <span className="flex gap-[4px] [&_svg]:fill-[#25d366]">
                 <WhatsApp />

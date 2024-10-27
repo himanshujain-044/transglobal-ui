@@ -16,7 +16,7 @@ const Home = () => {
         </div>
         <ImgSlider />
       </div>
-      <div className="px-3 md:px-8 py-4 flex flex-col gap-6">
+      <div className="px-3 md:px-8 py-8 flex flex-col gap-6">
         <div className="flex flex-col md:tracking-[1px] gap-y-2">
           <strong className="text-xl md:text-2xl">
             Join Us in Building a Sustainable Future
