@@ -27,7 +27,7 @@ const Footer = () => {
         <div
           className={cx("flex flex-col items-start justify-center text-start")}
         >
-          <strong className="text-xl py-2">Trans Global TL</strong>
+          <strong className="text-xl py-2">Trans Global Services LLC</strong>
           <p className="text-[#fff] font-extralight">
             The Storage and Terminal Solutions segment provides services for
             aboveground storage tanks and terminals, crude oil marketing and
@@ -81,7 +81,7 @@ const Footer = () => {
         >
           <strong className="py-1">Join with us</strong>
           <div>
-            <div className="flex gap-[1rem] [&_.MuiOutlinedInput-notchedOutline]:border-[1px] [&_.MuiOutlinedInput-notchedOutline]:border-solid [&_.MuiOutlinedInput-notchedOutline]:border-[#172554]">
+            <div className="flex gap-[1rem] [&_.MuiOutlinedInput-notchedOutline]:border-[1px] [&_.MuiOutlinedInput-notchedOutline]:border-solid [&_.MuiOutlinedInput-notchedOutline]:border-white">
               <TextField
                 id="email"
                 size="small"
@@ -107,29 +107,27 @@ const Footer = () => {
               </Button>
             </div>
           </div>
-          <div className="mt-[16px] [&_svg]:mr-[8px] [&_svg]:fill-[#172554]">
+          <div className="mt-[16px] [&_svg]:mr-[8px] [&_svg]:fill-white">
             <a
               href="https://www.facebook.com/profile.php?id=61551970517773"
               target="_blank"
               rel="noreferrer"
             >
-              <FacebookOutlinedIcon
-                sx={{ bgcolor: "white", cursor: "pointer" }}
-              />
+              <FacebookOutlinedIcon sx={{ cursor: "pointer" }} />
             </a>
             <a
               href="https://www.instagram.com/madhuvandigitalstech/"
               target="_blank"
               rel="noreferrer"
             >
-              <InstagramIcon sx={{ bgcolor: "white", cursor: "pointer" }} />
+              <InstagramIcon sx={{ cursor: "pointer" }} />
             </a>
             <a
               href="https://twitter.com/madhuvandigital"
               target="_blank"
               rel="noreferrer"
             >
-              <TwitterIcon sx={{ bgcolor: "white", cursor: "pointer" }} />
+              <TwitterIcon sx={{ cursor: "pointer" }} />
             </a>
           </div>
         </div>

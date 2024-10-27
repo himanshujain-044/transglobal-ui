@@ -37,8 +37,8 @@ const Header = () => {
               { "text-[12px]": !aboveMobileView }
             )}
           >
-            <span>Trans Global TL</span>
-            <span>Petrochemical</span>
+            <span>Trans Global</span>
+            <span>Services LLC</span>
           </div>
         </Grid2>
 

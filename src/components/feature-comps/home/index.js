@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="w-full h-full">
       <div className="relative">
-        <div className="z-[1] absolute text-[#172554] w-[90%] m-auto h-max md:w-[32rem] rounded-[4px] p-[1rem] bottom-2 md:bottom-[2rem] left-2 md:left-[1rem] bg-[#a9a9a9] opacity-[0.75] ml-1 md:ml-4">
+        <div className="z-[1] absolute text-[#172554] w-[90%] m-auto h-max md:w-[32rem] rounded-[4px] p-[1rem] bottom-2 md:bottom-[2rem] left-2 md:left-[1rem] bg-slate-100 opacity-[0.75] ml-1 md:ml-4">
           <h1 className="text-[24px] md:text-[40px] font-bold">
             Welcome to Transglobal
           </h1>

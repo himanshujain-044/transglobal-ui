@@ -59,16 +59,17 @@ const AboutUs = () => {
           </h1>
           <hr className="border-none w-full h-[0.0625rem] bg-[#172554] mb-[0.5rem]" />
           <p className="text-gray-600 text-justify leading-[1.25rem] tracking-[2px] h-min">
-            Rokan Chowdhury is President of Trans Global LT. Prior to his
-            presidency, Mr. Payne served as Senior Vice President of Operations
-            beginning in 2019. From 2016 to 2019, he served as Vice President of
-            Business Services, then Senior Vice President of Finance and
-            Business Services. Mr. Payne joined Trans Global LT as a Division
-            Manager in 2012 and established their Mining and Minerals division.
-            Before joining Matrix, Mr. Payne held leadership positions in
-            operations, finance, and project controls for Aker Solutions /
-            Kvaerner and Jacobs. Mr. Payne holds a Bachelor of Science in
-            Business Administration, Finance from the University of Arizona.
+            Rokan Chowdhury is President of Trans Global Services LLC. Prior to
+            his presidency, Mr. Payne served as Senior Vice President of
+            Operations beginning in 2019. From 2016 to 2019, he served as Vice
+            President of Business Services, then Senior Vice President of
+            Finance and Business Services. Mr. Payne joined Trans Global
+            Services LLC as a Division Manager in 2012 and established their
+            Mining and Minerals division. Before joining Matrix, Mr. Payne held
+            leadership positions in operations, finance, and project controls
+            for Aker Solutions / Kvaerner and Jacobs. Mr. Payne holds a Bachelor
+            of Science in Business Administration, Finance from the University
+            of Arizona.
           </p>
         </div>
       </div>
