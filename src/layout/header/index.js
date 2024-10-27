@@ -77,7 +77,7 @@ const Header = () => {
             onClick={() => setDrawerOpen(false)}
             className="bg-teal-50 flex justify-center border w-full"
           >
-            <CloseIcon fontSize="large" className="text-red-500" />
+            <CloseIcon fontSize="large" className="text-[#172554]" />
           </IconButton>
           {menuItems.map((menu) => (
             <div
