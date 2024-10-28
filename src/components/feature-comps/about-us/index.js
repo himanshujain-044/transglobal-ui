@@ -75,7 +75,7 @@ const AboutUs = () => {
       </div>
       <div className="flex flex-col items-center gap-6 mt-2">
         <strong className="text-3xl md:text-5xl py-4">LEADERSHIP</strong>
-        <div className="flex md:flex-row flex-col gap-6 px-8 md:px-0">
+        <div className="flex md:flex-row flex-col gap-6 px-0">
           <img
             src="https://www.matrixservice.com/wp-content/uploads/2022/03/Shawn-Payne-200x200-1.jpg"
             className="object-cover md:w-[200px] w-full"
@@ -97,7 +97,7 @@ const AboutUs = () => {
             </span>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col gap-4 px-8 md:px-0">
+        <div className="flex md:flex-row flex-col gap-4 px-0">
           <img
             src="https://www.matrixservice.com/wp-content/uploads/2021/07/ExecutiveHeadshots-MarkFillman-web_200x200.jpg"
             className="object-cover md:w-[200px] w-full"
@@ -119,7 +119,7 @@ const AboutUs = () => {
             </span>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col gap-4 px-8 md:px-0">
+        <div className="flex md:flex-row flex-col gap-4 px-0">
           <img
             src="https://www.matrixservice.com/wp-content/uploads/2024/08/Longer-headshot.jpg"
             className="object-cover md:w-[200px] w-full"
