@@ -135,8 +135,8 @@ const Footer = () => {
       <hr className="w-full h-[1px] m-0 my-[2rem] bg-[linear-gradient(90deg_,_#6484ef_0%_,_#5ab6f0_100%)]" />
       <div className="flex flex-col md:flex-row justify-between w-full gap-4 z-10">
         <strong className="no-underline w-auto text-sm">
-          © {new Date().getFullYear()}. All rights reserved by Trans Global TL
-          inc.
+          © {new Date().getFullYear()}. All rights reserved by Trans Global
+          Services LLC.
         </strong>
 
         <div className="flex md:flex-row flex-col item-center justify-between gap-3 md:gap-8">
