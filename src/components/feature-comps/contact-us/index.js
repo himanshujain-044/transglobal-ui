@@ -58,7 +58,7 @@ const ContactUs = () => {
   const hasDesktopView = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
   return (
-    <div className="py-8">
+    <div className="p-6 md:p-8">
       <h3 className="bg-[#172554] bg-clip-text font-semibold text-2xl md:text-4xl mb-8 text-center">
         Get Ready to Start the Service
       </h3>
@@ -157,6 +157,7 @@ const ContactUs = () => {
               />
             </FormControl>
           </div>
+
           <FormControl className="w-full my-[0.7rem] flex items-baseline text-left [&_div]:w-full [&_.MuiFormHelperText-contained]:m-0">
             <InputLabel>Service Type</InputLabel>
             <Select
