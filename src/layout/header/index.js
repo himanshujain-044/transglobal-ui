@@ -6,17 +6,44 @@ import CloseIcon from "@mui/icons-material/Close";
 import cx from "classnames";
 import logo from "../../assets/logos/logo.png";
 import { useMenu } from "../../context/MenuContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const menuItems = [
-  { label: "Home", val: 1 },
-  { label: "Services", val: 2 },
-  { label: "Project Reference", val: 3 },
-  { label: "About Us", val: 4 },
-  { label: "Contact", val: 5 },
+  { label: "Home", route: "/home" },
+  { label: "Services", route: "/services" },
+  {
+    label: "Project",
+    route: "/project",
+    nestedMenu: [
+      {
+        nestedLabel: "Hydrocracking Processes",
+        nestedRoute: "/hydrocracking-processes",
+      },
+      { nestedLabel: "Refining Processes", nestedRoute: "/refining-processes" },
+      {
+        nestedLabel: "Refinery Operations",
+        nestedRoute: "/refinery-operations",
+      },
+    ],
+  },
+  {
+    label: "About Us",
+    route: "/about-us",
+    // nestedMenu: [
+    //   {
+    //     nestedLabel: "Hydrocracking Processes",
+    //     nestedRoute: "hydrocrackingProcesses",
+    //   },
+    //   { nestedLabel: "Refining Processes", nestedRoute: "refiningProcesses" },
+    // ],
+  },
+  { label: "Contact", route: "/contact" },
 ];
 
 const Header = () => {
   const { selectedMenu, onMenuChange } = useMenu(); // Get from context
+  const navigate = useNavigate();
+  const location = useLocation();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const aboveMobileView = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
@@ -29,7 +56,7 @@ const Header = () => {
             height={aboveMobileView ? "150" : "100"}
             width={aboveMobileView ? "150" : "100"}
             className="cursor-pointer"
-            onClick={() => onMenuChange({ label: "Home", val: 1 })}
+            onClick={() => navigate(menuItems[0].route)}
           />
           <div
             className={cx(
@@ -46,16 +73,41 @@ const Header = () => {
         {aboveMobileView ? (
           <Grid2 className="flex items-center gap-[12px] text-[18px] font-semibold text-gray-600">
             {menuItems.map((menu) => (
-              <div
-                key={menu.val}
-                onClick={() => onMenuChange(menu)}
-                className={cx(
-                  "pb-[6px] px-[2px] hover:text-blue-950 cursor-pointer text-base",
-                  selectedMenu === menu.val &&
-                    "border-b-[2px] border-solid border-blue-950 text-blue-950"
+              <div key={menu.route}>
+                <div
+                  onClick={() =>
+                    navigate(
+                      menu.route +
+                        `${
+                          menu?.nestedMenu?.length
+                            ? menu?.nestedMenu?.[0].nestedRoute
+                            : ""
+                        }`
+                    )
+                  }
+                  className={cx(
+                    "pb-[6px] px-[2px] hover:text-blue-950 cursor-pointer text-base peer",
+                    location.pathname.includes(menu.route) &&
+                      "border-b-[2px] border-solid border-blue-950 text-blue-950"
+                  )}
+                >
+                  {menu.label}
+                </div>
+                {menu?.nestedMenu?.length && (
+                  <div className="text-base hidden peer-hover:flex hover:flex flex-col cursor-pointer absolute bg-white p-[4px] border-[1px] border-solid border-gray-600 rounded-[4px]">
+                    {menu?.nestedMenu.map((nestedMItem) => (
+                      <div
+                        key={nestedMItem.nestedRoute}
+                        onClick={() =>
+                          navigate(menu.route + nestedMItem.nestedRoute)
+                        }
+                        className="mb-[4px] border-b-[1px] border-solid border-gray-600 hover:text-blue-950 hover:border-blue-950"
+                      >
+                        {nestedMItem.nestedLabel}
+                      </div>
+                    ))}
+                  </div>
                 )}
-              >
-                {menu.label}
               </div>
             ))}
           </Grid2>

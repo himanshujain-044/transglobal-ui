@@ -4,17 +4,14 @@ import Home from "../../components/feature-comps/home";
 import ProjectReference from "../../components/feature-comps/project-reference";
 import Services from "../../components/feature-comps/services";
 import { useMenu } from "../../context/MenuContext";
+import PublicRoutes from "../../routes/public-routes";
 
 const Body = () => {
   const { selectedMenu } = useMenu();
 
   return (
     <div className="relative mt-[68px] md:mt-[88px]">
-      {selectedMenu === 1 && <Home />}
-      {selectedMenu === 2 && <Services />}
-      {selectedMenu === 3 && <ProjectReference />}
-      {selectedMenu === 4 && <AboutUs />}
-      {selectedMenu === 5 && <ContactUs />}
+      <PublicRoutes />
     </div>
   );
 };
