@@ -49,7 +49,7 @@ const ContactUs = () => {
     fullName: "",
     email: "",
     phone: "",
-    countryCode: "+91",
+    countryCode: "+1",
     serviceType: "specialtyVessels",
     requirementType: "newProject",
     description: "",
