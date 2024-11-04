@@ -59,23 +59,23 @@ const ContactUs = () => {
 
   return (
     <div className="p-6 md:p-8">
-      <h3 className="bg-[#172554] bg-clip-text font-semibold text-2xl md:text-4xl mb-8 text-center">
+      <h3 className="bg-[#172554] bg-clip-text font-semibold text-[1.45rem] md:text-4xl mb-8 text-center">
         Get Ready to Start the Service
       </h3>
       <div className="flex flex-col md:flex-row justify-center gap-[3rem]">
         <div className="flex flex-col ">
-          <div className="flex flex-col bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-8 md:px-8">
-            <strong className="text-center">Contact Us</strong>
+          <div className="flex flex-col bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-4 md:px-8 gap-y-1">
+            <strong className="text-center font-semibold">Contact Us</strong>
             <div>
-              <strong>Address:</strong>
+              <strong>Address: </strong>
               <span>24 Greenway Plaza # 1205, Houston, TX 77027</span>
             </div>
             <div>
-              <strong>Call on:</strong> <span>+1 (832) 202-3840</span>
+              <strong>Call on: </strong> <span>+1 (832) 202-3840</span>
             </div>
           </div>
           <hr className="h-[2px] bg-[#172554]" />
-          <div className="flex flex-col gap-[1rem] bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-8 md:px-8">
+          <div className="flex flex-col gap-[1rem] bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-4 md:px-8">
             <FormControl className="w-full my-[0.7rem] flex items-baseline text-left [&_div]:w-full [&_.MuiFormHelperText-contained]:m-0">
               <TextField
                 id="fullName"

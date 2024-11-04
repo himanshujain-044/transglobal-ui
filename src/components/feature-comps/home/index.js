@@ -14,12 +14,12 @@ const Home = () => {
           </div>
         </div>
         <ImgSlider speed={2}>
-          {images.map((src, index) => (
+          {[...images, ...images].map((src, index) => (
             <img
               key={index}
               src={src}
               alt={`Slide ${index}`}
-              className="w-full min-h-8 md:h-[36rem] object-cover"
+              className="w-full h-[24rem] md:h-[34rem] object-cover"
             />
           ))}
         </ImgSlider>
