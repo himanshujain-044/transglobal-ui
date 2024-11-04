@@ -23,16 +23,16 @@ export const offersCard = [
   {
     title: "Technology Partner",
     description:
-      "As a dedicated technology partner for research refineries, we drive advancements in refining processes.",
+      "As a dedicated technology partner for research refineries, we drive advancements in refining processes with a strong focus on optimizing carbon emissions, maximizing hydrogen utilization, and enhancing catalytic performance. Our tailored solutions support refineries in developing cleaner, more efficient operations, empowering breakthroughs in sustainability and operational excellence. Partner with us to achieve new standards in emission reduction and resource optimization for the future of refining.",
   },
   {
     title: "Feasibility Studies",
     description:
-      "We offer comprehensive feasibility studies, helping clients assess the technical, economic, and environmental viability.",
+      "We offer comprehensive feasibility studies, helping clients assess the technical, economic, and environmental viability of refining projects. Our studies provide a clear roadmap, focusing on optimizing carbon emissions, efficient hydrogen utilization, and catalytic performance. With detailed analysis and actionable insights, we enable informed decision-making to drive sustainable, efficient refinery development.",
   },
   {
     title: "Process Troubleshooting",
     description:
-      "Our process troubleshooting services are designed to address complex operational issues and optimize plant efficiency.",
+      "Our process troubleshooting services for refineries are designed to address complex operational issues by pinpointing inefficiencies, diagnosing equipment or process bottlenecks, and conducting detailed root-cause analysis. With expertise in catalytic processes, we optimize catalyst performance to enhance reaction efficiency, reduce emissions, and extend catalyst lifespan. Using advanced diagnostics and targeted solutions, we help refineries achieve peak plant efficiency, improve system reliability, and minimize downtime for continuous, optimized operations.",
   },
 ];

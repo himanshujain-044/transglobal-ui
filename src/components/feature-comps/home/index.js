@@ -60,7 +60,7 @@ const Home = () => {
             {[...offersCard, ...offersCard].map((card, i) => (
               <div
                 key={i}
-                className="min-w-[300px] h-auto flex-wrap p-4 rounded-md flex flex-col bg-white gap-y-1 shadow-md shadow-[#17255433]"
+                className="min-w-[350px] min-h-[40px] flex-wrap p-3 rounded-md flex flex-col bg-white gap-y-1 shadow-md shadow-[#17255433] text-justify whitespace-break-spaces"
               >
                 <strong className="text-base">{card.title}</strong>
                 <span className="text-sm py-2">{card.description}</span>

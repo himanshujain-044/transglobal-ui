@@ -1,19 +1,26 @@
 // Header.js
-import { useState } from "react";
-import { Grid2, useMediaQuery, IconButton, Drawer } from "@mui/material";
+import { Fragment, useState } from "react";
+import {
+  Grid2,
+  useMediaQuery,
+  IconButton,
+  Drawer,
+  MenuItem,
+  Menu,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import cx from "classnames";
 import logo from "../../assets/logos/logo.png";
-import { useMenu } from "../../context/MenuContext";
 import { useLocation, useNavigate } from "react-router-dom";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const menuItems = [
-  { label: "Home", route: "/home" },
-  { label: "Services", route: "/services" },
+  { label: "Home", route: "home" },
+  { label: "Services", route: "services" },
   {
     label: "Project",
-    route: "/project",
+    route: "project",
     nestedMenu: [
       {
         nestedLabel: "Hydrocracking Processes",
@@ -28,24 +35,33 @@ const menuItems = [
   },
   {
     label: "About Us",
-    route: "/about-us",
-    // nestedMenu: [
-    //   {
-    //     nestedLabel: "Hydrocracking Processes",
-    //     nestedRoute: "hydrocrackingProcesses",
-    //   },
-    //   { nestedLabel: "Refining Processes", nestedRoute: "refiningProcesses" },
-    // ],
+    route: "about-us",
   },
-  { label: "Contact", route: "/contact" },
+  { label: "Contact", route: "contact" },
 ];
 
 const Header = () => {
-  const { selectedMenu, onMenuChange } = useMenu(); // Get from context
   const navigate = useNavigate();
   const location = useLocation();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const aboveMobileView = useMediaQuery((theme) => theme.breakpoints.up("md"));
+
+  const [anchorEl, setAnchorEl] = useState(null); // State for anchor element for menu
+
+  const handleMenuClick = (menu) => (event) => {
+    if (menu?.nestedMenu?.length > 0) {
+      // navigate(`${menu.route + menu?.nestedMenu?.[0].nestedRoute}`);
+      setAnchorEl(event.currentTarget);
+      return;
+    }
+    navigate(menu.route);
+    setDrawerOpen(false); // Close the drawer
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null); // Close the menu
+    setDrawerOpen(false); // Close the drawer
+  };
 
   return (
     <>
@@ -131,20 +147,52 @@ const Header = () => {
           >
             <CloseIcon fontSize="large" className="text-[#172554]" />
           </IconButton>
+
           {menuItems.map((menu) => (
-            <div
-              key={menu.val}
-              onClick={() => {
-                onMenuChange(menu);
-                setDrawerOpen(false);
-              }}
-              className={cx(
-                "py-2 cursor-pointer text-base",
-                selectedMenu === menu.val && "text-blue-950 font-bold"
-              )}
-            >
-              {menu.label}
-            </div>
+            <Fragment key={menu.route}>
+              <div
+                onClick={handleMenuClick(menu)}
+                className={cx("py-2 cursor-pointer text-base", {
+                  "text-blue-950 font-bold": location.pathname.includes(
+                    menu.route
+                  ),
+                })}
+              >
+                <div className="flex items-center">
+                  {menu.label}
+                  {menu?.nestedMenu?.length > 0 ? (
+                    <ArrowDropDownIcon fontSize="medium" />
+                  ) : null}
+                </div>
+              </div>
+
+              {menu?.nestedMenu?.length > 0 ? (
+                <Menu
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={() => setAnchorEl(null)}
+                >
+                  {menu.nestedMenu.map((nestedMItem) => (
+                    <MenuItem
+                      key={nestedMItem.nestedRoute}
+                      onClick={() => {
+                        navigate(menu.route + nestedMItem.nestedRoute);
+                        handleClose(); // Close the menu after selection
+                      }}
+                      className="cursor-pointer text-sm"
+                      sx={
+                        location.pathname.includes(nestedMItem.nestedRoute) && {
+                          color: "rgb(23 37 84)",
+                          fontWeight: "bold",
+                        }
+                      }
+                    >
+                      {nestedMItem.nestedLabel}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              ) : null}
+            </Fragment>
           ))}
         </div>
       </Drawer>
