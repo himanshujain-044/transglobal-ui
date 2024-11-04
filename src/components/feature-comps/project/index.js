@@ -11,12 +11,6 @@ const Project = () => {
   const locations = location.pathname.split("/");
   const data = projectData[routeMapping?.[locations?.[locations?.length - 1]]];
 
-  console.log(
-    "10",
-    locations,
-    locations[locations?.length - 1],
-    routeMapping?.[locations?.[locations?.length - 1]]
-  );
   return (
     <div className="px-6 md:px-12 py-8">
       <strong className="text-2xl md:text-4xl mb-6 text-center block">
@@ -38,7 +32,7 @@ const Project = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mt-12">
+      {/* <div className="flex flex-col items-center justify-center mt-12">
         <strong className="text-2xl md:text-5xl mb-6">Testimonials</strong>
         <div className="flex flex-col gap-[2rem] tracking-[1px]">
           <div className="flex flex-col md:flex-row gap-4 items-center w-full">
@@ -76,7 +70,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

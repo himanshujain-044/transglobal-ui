@@ -65,7 +65,7 @@ const ContactUs = () => {
       <div className="flex flex-col md:flex-row justify-center gap-[3rem]">
         <div className="flex flex-col ">
           <div className="flex flex-col bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-8 md:px-8">
-            <strong className="text-center">Contanct Us</strong>
+            <strong className="text-center">Contact Us</strong>
             <div>
               <strong>Address:</strong>
               <span>24 Greenway Plaza # 1205, Houston, TX 77027</span>
