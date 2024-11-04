@@ -84,7 +84,12 @@ const Header = () => {
                       "border-b-[2px] border-solid border-blue-950 text-blue-950"
                   )}
                 >
-                  {menu.label}
+                  <div className="flex items-center">
+                    {menu.label}
+                    {menu?.nestedMenu?.length > 0 ? (
+                      <ArrowDropDownIcon fontSize="medium" />
+                    ) : null}
+                  </div>
                 </div>
                 {menu?.nestedMenu?.length && (
                   <div className="text-base hidden peer-hover:flex hover:flex flex-col cursor-pointer absolute bg-white p-[4px] border-[1px] border-solid border-gray-600 rounded-[4px]">
@@ -95,7 +100,7 @@ const Header = () => {
                           navigate(menu.route + nestedMItem.nestedRoute)
                         }
                         className={cx(
-                          "mb-[4px] border-b-[1px] border-solid border-gray-600 hover:text-blue-950 hover:border-blue-950",
+                          "mb-[4px] border-b-[1px] border-solid border-gray-400 hover:text-blue-950 text-gray-500 last:border-none",
                           location.pathname.includes(nestedMItem.nestedRoute) &&
                             "border-blue-950 text-blue-950"
                         )}

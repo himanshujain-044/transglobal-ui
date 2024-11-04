@@ -13,21 +13,21 @@ const Project = () => {
 
   return (
     <div className="px-6 md:px-12 py-8">
-      <strong className="text-2xl md:text-4xl mb-6 text-center block">
+      <strong className="text-xl md:text-4xl mb-6 text-center text-wrap">
         {data?.name}
       </strong>
-      <div className="flex gap-[1rem] md:gap-[2rem] flex-col md:flex-row items-center justify-center mt-[2rem]">
-        <div className="p-[4px] md:p-[1rem] flex flex-col gap-[1rem]  bg-white rounded-[4px] tracking-[1px] max-w-[100%] md:max-w-[60%]">
+      <div className="flex gap-[1rem] md:gap-[2rem] flex-col-reverse md:flex-row items-center justify-center mt-[2rem]">
+        <div className="h-max px-4 py-6 md:py-12 md:px-8 flex flex-col gap-[1rem]  bg-white rounded-[4px] tracking-[1px] max-w-[100%] md:max-w-[60%]">
           {data?.content.map((item, index) => (
             <span key={index}>{item}</span>
           ))}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 justify-center items-center md:max-w-[1150px]">
+        <div className="grid grid-cols-2 gap-4 justify-center items-center md:max-w-[1150px] md:mt-8">
           {data?.imgs.map((imgUrl, index) => (
             <img
               key={index}
               src={imgUrl}
-              className="rounded-[4px] object-cover"
+              className="rounded-[4px] object-cover w-[300px] aspect-auto"
             />
           ))}
         </div>
