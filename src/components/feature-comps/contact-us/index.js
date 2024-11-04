@@ -107,7 +107,7 @@ const ContactUs = () => {
                 }}
               />
             </FormControl>
-            <div className="w-full my-[0.7rem] flex gap-[8px] items-center text-left [&_div]:w-full [&_div]:flex [&_.MuiFormHelperText-contained]:m-0">
+            <div className="w-full flex gap-[8px] items-center text-left [&_div]:w-full [&_div]:flex [&_.MuiFormHelperText-contained]:m-0">
               <FormControl className="flex mr-[4px] !w-[10rem]">
                 <InputLabel>Country Code</InputLabel>
                 <Select
@@ -170,25 +170,20 @@ const ContactUs = () => {
               </FormControl>
             </div>
 
-            <FormControl className="w-full my-[0.7rem] flex items-baseline text-left [&_div]:w-full [&_.MuiFormHelperText-contained]:m-0">
-              <InputLabel>Service Type</InputLabel>
-              <Select
-                labelId="service-type-label"
-                label="Service Type"
+            <FormControl>
+              <TextField
+                id="phoneNumber"
                 size="small"
-                value={allFormValues.serviceType}
+                variant="outlined"
+                label="Service Type"
+                aria-describedby="phoneNumber-helper-text"
+                helperText={false && "Incorrect entry."}
                 onChange={(e) => {
                   setAllFormValues((prev) => {
                     return { ...prev, serviceType: e.target.value };
                   });
                 }}
-              >
-                {serviceType.map((service, i) => (
-                  <MenuItem value={service.value} key={i}>
-                    {service.text}
-                  </MenuItem>
-                ))}
-              </Select>
+              />
             </FormControl>
 
             <FormControl className="w-full my-[0.7rem] flex items-baseline text-left [&_div]:w-full [&_.MuiFormHelperText-contained]:m-0">
