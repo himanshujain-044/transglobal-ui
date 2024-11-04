@@ -1,4 +1,5 @@
 import ImgSlider from "../../shared-comps/img-slider";
+import { offersCard, images } from "../../../utilities/utilsItem";
 
 const Home = () => {
   return (
@@ -14,7 +15,16 @@ const Home = () => {
             optimized production with energy efficiency.
           </div>
         </div>
-        <ImgSlider />
+        <ImgSlider speed={2}>
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Slide ${index}`}
+              className="w-full min-h-8 md:h-[36rem] object-cover"
+            />
+          ))}
+        </ImgSlider>
       </div>
       <div className="px-3 md:px-8 py-8 flex flex-col gap-6">
         <div className="flex flex-col md:tracking-[1px] gap-y-2">
@@ -45,36 +55,18 @@ const Home = () => {
           <strong className="tracking-[2px] text-4xl md:text-[2.5rem]">
             What We Offer
           </strong>
-          <div className="flex md:flex-row flex-col w-full gap-[1rem] tracking-[1px] my-6">
-            <div className="p-4 rounded-md flex flex-col bg-white gap-y-1 shadow-md shadow-[#17255433]">
-              <strong className="text-base">
-                Integrated Refinery Solutions:
-              </strong>
-              <span className="text-sm py-2">
-                Our cutting-edge refineries are designed to optimize hydrogen
-                production alongside traditional refining processes, ensuring
-                efficiency and minimal environmental impact.
-              </span>
-            </div>
 
-            <div className="p-4 rounded-md flex flex-col bg-white gap-y-1 shadow-md shadow-[#17255433]">
-              <strong className="text-base">Hydrogen Packages:</strong>
-              <span className="text-sm py-2">
-                We provide tailored hydrogen solutions that cater to diverse
-                industrial needs, from fuel production to chemical
-                manufacturing, enhancing operational flexibility.
-              </span>
-            </div>
-
-            <div className="p-4 rounded-md flex flex-col bg-white gap-y-1 shadow-md shadow-[#17255433]">
-              <strong className="text-base">Operational Expertise:</strong>
-              <span className="text-sm py-2">
-                Our experienced team manages and operates our facilities with a
-                focus on safety, reliability, and innovation, ensuring seamless
-                hydrogen production and distribution.
-              </span>
-            </div>
-          </div>
+          <ImgSlider classes="gap-4 py-6" speed={1}>
+            {[...offersCard, ...offersCard].map((card, i) => (
+              <div
+                key={i}
+                className="min-w-[300px] h-auto flex-wrap p-4 rounded-md flex flex-col bg-white gap-y-1 shadow-md shadow-[#17255433]"
+              >
+                <strong className="text-base">{card.title}</strong>
+                <span className="text-sm py-2">{card.description}</span>
+              </div>
+            ))}
+          </ImgSlider>
         </div>
       </div>
     </div>
