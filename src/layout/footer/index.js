@@ -10,9 +10,9 @@ import address from "../../assets/logos/location.png";
 import StarryCanvas from "../../components/shared-comps/star-canvas";
 
 const contactInfo = [
-  { text: "+ 1832-202-3840", icon: phone },
-  { text: "rokan@transglobaltl.com", icon: email },
-  { text: "11622 Palliser Place, Richmond, TX 77407. U.S.A", icon: address },
+  { text: "+1 (832) 202-3840", icon: phone },
+  { text: "info@transglobaltl.com", icon: email },
+  { text: "24 Greenway Plaza # 1205, Houston, TX 77027, USA", icon: address },
 ];
 const Footer = () => {
   const hasDesktopView = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -29,11 +29,11 @@ const Footer = () => {
         >
           <strong className="text-xl py-2">Trans Global Services LLC</strong>
           <p className="text-[#fff] font-extralight">
-            The Storage and Terminal Solutions segment provides services for
-            aboveground storage tanks and terminals, crude oil marketing and
-            export/import terminals, LNG facilities for import/export fueling
-            and bunkering, and other renewable energy storage and terminal
-            solutions.
+            Refineries produce hydrogen primarily through steam reforming of
+            natural gas or oil by-products. This hydrogen is crucial for various
+            refinery processes, such as desulfurization. It's distributed within
+            the refinery via pipelines and used on-site. Excess hydrogen may be
+            sold to external customers or stored for future use.
           </p>
         </div>
         <div
@@ -41,19 +41,19 @@ const Footer = () => {
         >
           <strong className="text-xl py-2">Service</strong>
           <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
-            Generator Rental
+            Hydrogen Production
           </span>
           <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
-            Energy Storage
+            Distribution Networks
           </span>
           <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
-            HVAC
+            Consulting & Solutions
           </span>
           <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
-            Load Banks
+            Feasibility Studies
           </span>
           <span className="text-[#fff] hover:underline cursor-pointer font-extralight">
-            Oil-Free Air Compressors
+            Integrated Refinery Solutions
           </span>
         </div>
         <div
@@ -148,19 +148,6 @@ const Footer = () => {
               </span>
             </div>
           ))}
-          <div className="flex items-center gap-1 md:justify-end text-base">
-            <a
-              href="//api.whatsapp.com/send?phone=917470839972&text=I have the requirement can we schedule have a call"
-              target="_blank"
-              rel="noreferrer"
-              className="no-underline hover:text-gray-600"
-            >
-              <span className="flex gap-[4px] [&_svg]:fill-[#25d366]">
-                <WhatsApp />
-                Click to Whatsapp
-              </span>
-            </a>
-          </div>
         </div>
       </div>
     </div>

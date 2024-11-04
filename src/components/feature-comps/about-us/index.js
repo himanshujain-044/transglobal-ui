@@ -10,40 +10,40 @@ const AboutUs = () => {
         />
 
         <p className="text-sm md:text-base py-1 tracking-wide">
-          At Global Delta, we are driving innovation in the refining industry
-          through cutting-edge research and the development of advanced
-          technologies that optimize efficiency, sustainability, and operational
-          excellence. Our multidisciplinary team of scientists, engineers, and
-          technical experts is dedicated to overcoming the complexities faced by
-          modern refineries, advancing solutions that maximize process
-          performance and minimize environmental impact.
+          At Trans Global TL Petrochemical, we are driving innovation in the
+          refining industry through cutting-edge research and the development of
+          advanced technologies that optimize efficiency, sustainability, and
+          operational excellence. Our multidisciplinary team of scientists,
+          engineers, and technical experts is dedicated to overcoming the
+          complexities faced by modern refineries, advancing solutions that
+          maximize process performance and minimize environmental impact.
         </p>
         <p className="text-sm md:text-base py-1 tracking-wide">
-          Our mission is to pioneer the next generation of refinery
-          technologies, focusing on process intensification, hydrogen
-          production, emissions reduction, energy efficiency, and
-          digitalization. Our expertise in hydrogen generation systems enables
-          refineries to meet increasing demand for cleaner fuels. We design and
-          develop hydrogen generators and related equipment that seamlessly
-          integrate into existing refinery operations, supporting
-          decarbonization efforts and improving hydrogen purity and yield.
+          Our mission is to lead the advancement of next-generation refinery
+          technologies with a strong focus on process intensification, emissions
+          reduction, energy efficiency, and digitalization. We specialize in
+          enhancing hydrogen generation systems that enable refineries to meet
+          the rising demand for cleaner fuels. Our designs and innovations
+          improve the efficiency, integration, and performance of hydrogen
+          generation equipment within refinery operations, supporting
+          decarbonization efforts and maximizing hydrogen purity and yield.
         </p>
         <p className="text-sm md:text-base py-1 tracking-wide">
-          Global Delta’s process technologies and lifecycle solutions enable
-          refineries to extract maximum value from hydrocarbons, including
-          advanced catalysts, gas separation systems, and hydrogen recovery
-          units. Through our state-of-the-art digital tools, we help operators
-          enhance efficiency, ensure operational stability, and improve asset
-          longevity.
+          Trans Global TL Petrochemical’s process technologies and lifecycle
+          solutions enable refineries to extract maximum value from
+          hydrocarbons, including advanced catalysts, gas separation systems,
+          and hydrogen recovery units. Through our state-of-the-art digital
+          tools, we help operators enhance efficiency, ensure operational
+          stability, and improve asset longevity.
         </p>
         <p className="text-sm md:text-base py-1 tracking-wide">
           Our commitment to safety, product quality, and environmental
           responsibility is at the core of everything we do. We work closely
           with our partners to implement technologies that not only improve
           refinery performance but also contribute to the global energy
-          transition. At Global Delta, we are leading the charge toward a more
-          sustainable future through innovative hydrogen solutions and
-          next-generation refining technologies.
+          transition. At Trans Global TL Petrochemical, we are leading the
+          charge toward a more sustainable future through innovative hydrogen
+          solutions and next-generation refining technologies.
         </p>
       </div>
       <div className="flex md:flex-row flex-col items-start gap-6 my-8 md:my-12">
@@ -55,11 +55,11 @@ const AboutUs = () => {
         />
         <div className="flex flex-col items-center md:items-end justify-center gap-[1.25rem] mb-4">
           <h1 className="text-black text-2xl md:text-[1.875rem] font-medium">
-            ROKAN CHOWDHURY
+            FRANK CAPRISTO
           </h1>
           <hr className="border-none w-full h-[0.0625rem] bg-[#172554] mb-[0.5rem]" />
           <p className="text-gray-600 text-justify leading-[1.25rem] tracking-[2px] h-min">
-            Rokan Chowdhury is President of Trans Global Services LLC. Prior to
+            Frank Capristo is President of Trans Global Services LLC. Prior to
             his presidency, Mr. Payne served as Senior Vice President of
             Operations beginning in 2019. From 2016 to 2019, he served as Vice
             President of Business Services, then Senior Vice President of
@@ -73,7 +73,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-6 mt-2">
+      {/* <div className="flex flex-col items-center gap-6 mt-2">
         <strong className="text-3xl md:text-5xl py-4">LEADERSHIP</strong>
         <div className="flex md:flex-row flex-col gap-6 px-0">
           <img
@@ -140,7 +140,7 @@ const AboutUs = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

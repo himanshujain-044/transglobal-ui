@@ -15,30 +15,7 @@ import logo from "../../assets/logos/logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-const menuItems = [
-  { label: "Home", route: "home" },
-  { label: "Services", route: "services" },
-  {
-    label: "Project",
-    route: "project",
-    nestedMenu: [
-      {
-        nestedLabel: "Hydrocracking Processes",
-        nestedRoute: "/hydrocracking-processes",
-      },
-      { nestedLabel: "Refining Processes", nestedRoute: "/refining-processes" },
-      {
-        nestedLabel: "Refinery Operations",
-        nestedRoute: "/refinery-operations",
-      },
-    ],
-  },
-  {
-    label: "About Us",
-    route: "about-us",
-  },
-  { label: "Contact", route: "contact" },
-];
+import { headerMenu } from "../../constants/header-menu";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -72,7 +49,7 @@ const Header = () => {
             height={aboveMobileView ? "150" : "100"}
             width={aboveMobileView ? "150" : "100"}
             className="cursor-pointer"
-            onClick={() => navigate(menuItems[0].route)}
+            onClick={() => navigate(headerMenu[0].route)}
           />
           <div
             className={cx(
@@ -88,7 +65,7 @@ const Header = () => {
         {/* Menu for larger screens */}
         {aboveMobileView ? (
           <Grid2 className="flex items-center gap-[12px] text-[18px] font-semibold text-gray-600">
-            {menuItems.map((menu) => (
+            {headerMenu.map((menu) => (
               <div key={menu.route}>
                 <div
                   onClick={() =>
@@ -117,7 +94,11 @@ const Header = () => {
                         onClick={() =>
                           navigate(menu.route + nestedMItem.nestedRoute)
                         }
-                        className="mb-[4px] border-b-[1px] border-solid border-gray-600 hover:text-blue-950 hover:border-blue-950"
+                        className={cx(
+                          "mb-[4px] border-b-[1px] border-solid border-gray-600 hover:text-blue-950 hover:border-blue-950",
+                          location.pathname.includes(nestedMItem.nestedRoute) &&
+                            "border-blue-950 text-blue-950"
+                        )}
                       >
                         {nestedMItem.nestedLabel}
                       </div>
@@ -148,7 +129,7 @@ const Header = () => {
             <CloseIcon fontSize="large" className="text-[#172554]" />
           </IconButton>
 
-          {menuItems.map((menu) => (
+          {headerMenu.map((menu) => (
             <Fragment key={menu.route}>
               <div
                 onClick={handleMenuClick(menu)}

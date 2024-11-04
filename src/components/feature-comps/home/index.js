@@ -6,9 +6,7 @@ const Home = () => {
     <div className="w-full h-full">
       <div className="relative">
         <div className="z-[1] absolute text-[#172554] w-[90%] m-auto h-max md:w-[32rem] rounded-[4px] p-[1rem] bottom-2 md:bottom-[2rem] left-2 md:left-[1rem] bg-slate-100 opacity-[0.75] ml-1 md:ml-4">
-          <h1 className="text-[24px] md:text-[40px] font-bold">
-            Welcome to Transglobal
-          </h1>
+          <h1 className="text-[24px] md:text-[40px] font-bold">Welcome</h1>
           <div className="tracking-normal md:tracking-[1px] text-sm md:text-base">
             We are pioneering the future of energy sector by building and
             operating refineries operates on latest industry standards and
