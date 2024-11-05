@@ -1,6 +1,9 @@
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { headerMenu } from "../../../constants/header-menu";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div className="px-3 py-6 md:px-8 md:py-6">
       <div className="flex flex-col items-start">
@@ -32,8 +35,11 @@ const Services = () => {
         <Button
           variant="contained"
           sx={{ marginTop: "1rem", backgroundColor: "#172554" }}
+          onClick={() => {
+            navigate(headerMenu[headerMenu.length - 1].route);
+          }}
         >
-          Get in touch
+          Contact us
         </Button>
       </div>
       <div className="flex flex-col items-end my-8 md:my-0">
@@ -61,8 +67,11 @@ const Services = () => {
         <Button
           variant="contained"
           sx={{ marginTop: "1rem", backgroundColor: "#172554" }}
+          onClick={() => {
+            navigate(headerMenu[headerMenu.length - 1].route);
+          }}
         >
-          Get in touch
+          Contact us
         </Button>
       </div>
       <div className="flex flex-col items-start">
@@ -96,8 +105,11 @@ const Services = () => {
         <Button
           variant="contained"
           sx={{ marginTop: "1rem", backgroundColor: "#172554" }}
+          onClick={() => {
+            navigate(headerMenu[headerMenu.length - 1].route);
+          }}
         >
-          Get in touch
+          Contact us
         </Button>
       </div>
     </div>

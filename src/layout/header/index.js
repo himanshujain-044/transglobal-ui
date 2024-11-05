@@ -1,5 +1,5 @@
 // Header.js
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
   Grid2,
   useMediaQuery,
@@ -14,7 +14,6 @@ import cx from "classnames";
 import logo from "../../assets/logos/logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
 import { headerMenu } from "../../constants/header-menu";
 
 const Header = () => {
@@ -25,6 +24,10 @@ const Header = () => {
 
   const [anchorEl, setAnchorEl] = useState(null); // State for anchor element for menu
 
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const handleMenuClick = (menu) => (event) => {
     if (menu?.nestedMenu?.length > 0) {
       // navigate(`${menu.route + menu?.nestedMenu?.[0].nestedRoute}`);

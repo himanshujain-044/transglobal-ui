@@ -41,9 +41,9 @@ const AboutUs = () => {
           responsibility is at the core of everything we do. We work closely
           with our partners to implement technologies that not only improve
           refinery performance but also contribute to the global energy
-          transition. At Trans Global Services LLC, we are leading the
-          charge toward a more sustainable future through innovative hydrogen
-          solutions and next-generation refining technologies.
+          transition. At Trans Global Services LLC, we are leading the charge
+          toward a more sustainable future through innovative hydrogen solutions
+          and next-generation refining technologies.
         </p>
       </div>
       <div className="flex md:flex-row flex-col items-start gap-6 my-8 md:my-12">
@@ -59,17 +59,22 @@ const AboutUs = () => {
           </h1>
           <hr className="border-none w-full h-[0.0625rem] bg-[#172554] mb-[0.5rem]" />
           <p className="text-gray-600 text-justify leading-[1.25rem] tracking-[2px] h-min">
-            Frank Capristo is President of Trans Global Services LLC. Prior to
-            his presidency, Mr. Payne served as Senior Vice President of
-            Operations beginning in 2019. From 2016 to 2019, he served as Vice
-            President of Business Services, then Senior Vice President of
-            Finance and Business Services. Mr. Payne joined Trans Global
-            Services LLC as a Division Manager in 2012 and established their
-            Mining and Minerals division. Before joining Matrix, Mr. Payne held
-            leadership positions in operations, finance, and project controls
-            for Aker Solutions / Kvaerner and Jacobs. Mr. Payne holds a Bachelor
-            of Science in Business Administration, Finance from the University
-            of Arizona.
+            Frank Capristo, a dynamic and forward-thinking individual, is the
+            driving force behind Trans Global Services LLC. With a
+            deep-rooted passion for energy and a keen eye for innovation, he
+            established the company with a vision to revolutionize the refining
+            industry. He recognized the growing demand for sustainable and
+            efficient energy solutions and sought to address this need by
+            building a world-class refinery. Through meticulous planning,
+            strategic partnerships, and unwavering dedication, Frank Capristo
+            successfully brought Trans Global Services LLC to fruition.
+            His leadership style is characterized by a strong emphasis on
+            innovation, environmental responsibility, and employee empowerment.
+            Frank Capristo fosters a culture of excellence, encouraging his team
+            to think creatively and strive for continuous improvement. Under his
+            guidance, Trans Global Services LLC has become a leader in
+            the industry, known for its commitment to quality, safety, and
+            sustainability.
           </p>
         </div>
       </div>
