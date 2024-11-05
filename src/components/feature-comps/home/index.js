@@ -33,7 +33,7 @@ const Home = () => {
             Explore our website to learn more about our technologies,
             partnerships, and how we can work together to harness the power of
             hydrogen. Together, we can drive the shift towards a clean energy
-            future. Transglobal, we are revolutionizing the energy landscape
+            future. Trans Global Services LLC, we are revolutionizing the energy landscape
             with our state-of-the-art refineries that integrate advanced
             hydrogen production technologies. Our commitment to sustainable
             practices and innovation positions us as leaders in the transition

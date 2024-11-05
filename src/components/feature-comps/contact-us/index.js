@@ -73,6 +73,9 @@ const ContactUs = () => {
             <div>
               <strong>Call on: </strong> <span>+1 (832) 202-3840</span>
             </div>
+            <div>
+              <strong>Email: </strong> <span>info@transglobaltl.com</span>
+            </div>
           </div>
           <hr className="h-[2px] bg-[#172554]" />
           <div className="flex flex-col gap-[1rem] bg-white border-[1px] border-solid border-gray-200 rounded-[4px] py-4 px-4 md:px-8">

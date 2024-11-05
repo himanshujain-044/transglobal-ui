@@ -10,7 +10,7 @@ const AboutUs = () => {
         />
 
         <p className="text-sm md:text-base py-1 tracking-wide">
-          At Trans Global TL Petrochemical, we are driving innovation in the
+          At Trans Global Services LLC, we are driving innovation in the
           refining industry through cutting-edge research and the development of
           advanced technologies that optimize efficiency, sustainability, and
           operational excellence. Our multidisciplinary team of scientists,
@@ -29,7 +29,7 @@ const AboutUs = () => {
           decarbonization efforts and maximizing hydrogen purity and yield.
         </p>
         <p className="text-sm md:text-base py-1 tracking-wide">
-          Trans Global TL Petrochemical’s process technologies and lifecycle
+          Trans Global Services LLC’s process technologies and lifecycle
           solutions enable refineries to extract maximum value from
           hydrocarbons, including advanced catalysts, gas separation systems,
           and hydrogen recovery units. Through our state-of-the-art digital
@@ -41,19 +41,19 @@ const AboutUs = () => {
           responsibility is at the core of everything we do. We work closely
           with our partners to implement technologies that not only improve
           refinery performance but also contribute to the global energy
-          transition. At Trans Global TL Petrochemical, we are leading the
+          transition. At Trans Global Services LLC, we are leading the
           charge toward a more sustainable future through innovative hydrogen
           solutions and next-generation refining technologies.
         </p>
       </div>
       <div className="flex md:flex-row flex-col items-start gap-6 my-8 md:my-12">
-        <img
+        {/* <img
           src="https://media.gettyimages.com/id/530281675/photo/happy-businessman-sitting-in-office-lobby.jpg?s=2048x2048&w=gi&k=20&c=wSQeW8DksjuTTcZoSwo6MfLkCzKUM9ApkeYkpjNSnqk="
           alt="About Us"
           loading="lazy"
           className="bg-cover bg-no-repeat bg-fixed bg-center md:h-[20%] md:w-[40%] w-full"
-        />
-        <div className="flex flex-col items-center md:items-end justify-center gap-[1.25rem] mb-4">
+        /> */}
+        <div className="flex flex-col items-center justify-center gap-[1.25rem] mb-4">
           <h1 className="text-black text-2xl md:text-[1.875rem] font-medium">
             FRANK CAPRISTO
           </h1>
