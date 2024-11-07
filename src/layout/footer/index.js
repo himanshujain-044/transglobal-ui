@@ -102,6 +102,7 @@ const Footer = () => {
                   backgroundColor: "#172554",
                   width: "10rem",
                 }}
+                aria-label="Subscribe"
               >
                 Subscribe
               </Button>
@@ -112,6 +113,7 @@ const Footer = () => {
               href="https://www.facebook.com/profile.php?id=61551970517773"
               target="_blank"
               rel="noreferrer"
+              aria-label="facebook"
             >
               <FacebookOutlinedIcon sx={{ cursor: "pointer" }} />
             </a>
@@ -119,6 +121,7 @@ const Footer = () => {
               href="https://www.instagram.com/madhuvandigitalstech/"
               target="_blank"
               rel="noreferrer"
+              aria-label="instagram"
             >
               <InstagramIcon sx={{ cursor: "pointer" }} />
             </a>
@@ -126,6 +129,7 @@ const Footer = () => {
               href="https://twitter.com/madhuvandigital"
               target="_blank"
               rel="noreferrer"
+              aria-label="twitter"
             >
               <TwitterIcon sx={{ cursor: "pointer" }} />
             </a>
@@ -140,8 +144,8 @@ const Footer = () => {
         </strong>
 
         <div className="flex md:flex-row flex-col item-center justify-between gap-3 md:gap-8">
-          {contactInfo.map((item) => (
-            <div className="flex items-center gap-2 justify-start">
+          {contactInfo.map((item, index) => (
+            <div key={index} className="flex items-center gap-2 justify-start">
               <img src={item.icon} alt="" width="18" />
               <span className="text-wrap text-sm hover:text-gray-100">
                 {item.text}

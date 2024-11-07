@@ -31,6 +31,7 @@ const Services = () => {
         <img
           src="https://www.oil-refinery.com/wp-content/uploads/2018/08/inside-refinery-plant.jpg"
           className="w-full md:w-[45%] h-[22rem] object-cover"
+          alt="Services at Transglobaltl"
         />
         <Button
           variant="contained"
@@ -38,6 +39,7 @@ const Services = () => {
           onClick={() => {
             navigate(headerMenu[headerMenu.length - 1].route);
           }}
+          aria-label="Contactus"
         >
           Contact us
         </Button>
@@ -63,6 +65,7 @@ const Services = () => {
         <img
           src="https://oilbridges.com/wp-content/uploads/2020/02/404-bg-1170x517.jpg"
           className="w-full md:w-[45%] h-[22rem] object-cover"
+          alt="Services at Transglobaltl"
         />
         <Button
           variant="contained"
@@ -70,6 +73,7 @@ const Services = () => {
           onClick={() => {
             navigate(headerMenu[headerMenu.length - 1].route);
           }}
+          aria-label="Contactus"
         >
           Contact us
         </Button>
@@ -101,6 +105,7 @@ const Services = () => {
         <img
           src="https://www.airproducts.com/-/media/images/969x646/content-row-image/509848898-refinery-twilight-3x2.jpg?as=0&w=969&hash=1FECECB22CCBFE6550F81C82337535C8"
           className="w-full md:w-[45%] h-[22rem] object-cover"
+          alt="Serivces at Transglobaltl"
         />
         <Button
           variant="contained"
@@ -108,6 +113,7 @@ const Services = () => {
           onClick={() => {
             navigate(headerMenu[headerMenu.length - 1].route);
           }}
+          aria-label="Contactus"
         >
           Contact us
         </Button>

@@ -1,3 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+# Allow indexing of the rest of the site
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.transglobaltl.com/

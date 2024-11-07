@@ -7,6 +7,7 @@ const AboutUs = () => {
         <img
           src="https://www.consultancy.uk/illustrations/news/detail/2018-04-17-201940028-Operational-excellence-can-improve-margins-at-oil-refineries.jpg"
           className="w-full md:w-[70%] m-auto object-contain md:h-[400px] mb-6"
+          alt="about-transglobaltl"
         />
 
         <p className="text-sm md:text-base py-1 tracking-wide">

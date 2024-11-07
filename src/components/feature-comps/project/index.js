@@ -28,6 +28,7 @@ const Project = () => {
               key={index}
               src={imgUrl}
               className="rounded-[4px] object-cover w-[300px] aspect-auto"
+              alt={`Project ${index}`}
             />
           ))}
         </div>

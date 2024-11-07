@@ -232,6 +232,7 @@ const ContactUs = () => {
             <Button
               variant="contained"
               sx={{ marginTop: "0.5rem", backgroundColor: "#172554" }}
+              aria-label="Submit"
             >
               Submit
             </Button>

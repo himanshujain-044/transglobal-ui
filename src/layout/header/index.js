@@ -48,6 +48,7 @@ const Header = () => {
       <Grid2 className="w-full fixed z-50 top-0 flex justify-between items-center px-3 pl-1 md:px-8 md:pl-4 bg-[#edf6f6] shadow-sm">
         <Grid2 className="flex items-center">
           <img
+            alt="trans-globaltl-logo"
             src={logo}
             height={aboveMobileView ? "150" : "100"}
             width={aboveMobileView ? "150" : "100"}
@@ -105,7 +106,7 @@ const Header = () => {
                         className={cx(
                           "mb-[4px] border-b-[1px] border-solid border-gray-400 hover:text-blue-950 text-gray-500 last:border-none",
                           location.pathname.includes(nestedMItem.nestedRoute) &&
-                            "border-blue-950 text-blue-950"
+                            "!border-blue-950 !text-blue-950"
                         )}
                       >
                         {nestedMItem.nestedLabel}
@@ -170,10 +171,12 @@ const Header = () => {
                       }}
                       className="cursor-pointer text-sm"
                       sx={
-                        location.pathname.includes(nestedMItem.nestedRoute) && {
-                          color: "rgb(23 37 84)",
-                          fontWeight: "bold",
-                        }
+                        location.pathname.includes(nestedMItem.nestedRoute)
+                          ? {
+                              color: "rgb(23 37 84)",
+                              fontWeight: "bold",
+                            }
+                          : {}
                       }
                     >
                       {nestedMItem.nestedLabel}
